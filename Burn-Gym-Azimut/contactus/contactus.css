@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Kdam+Thmor+Pro&family=Lato&family=Nunito:wght@200;400;900&family=Oxygen&display=swap');
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#contact-style {
+  background-image: url('../Resurse/img/contactus-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.contact-container {
+  width: 60%;
+  height: 82%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+}
+
+.contact-text {
+  padding: 0px 0px 10px 20px;
+}
+
+.contact-text p:nth-child(1) {
+  font-size: 45px;
+  font-weight: 800;
+  color: #e66969;
+  margin-bottom: 0px;
+}
+
+.contact-text p:nth-child(2) {
+  font-size: 16px;
+}
+
+.contact-text form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-text input:not(:last-child),
+textarea {
+  width: 150%;
+  padding: 20px;
+  margin: 5px 0px;
+  border: none;
+  outline: none;
+  background-color: #fff5f5;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-text input:focus:not(:last-child),
+textarea:focus {
+  box-shadow: 0px 0px 10px 3px rgba(214, 49, 49, 0.58);
+}
+
+.contact-text textarea {
+  resize: none;
+}
+
+.contactus-btn {
+  width: 150%;
+  height: 65px;
+  margin-top: 10px;
+  border: none;
+  background-color: #e66969;
+  color: #fff;
+  font-weight: 650;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.contactus-btn:hover {
+  background-color: #d63131;
+}
+
+/* left stylyng of container ends */
+.contact-info {
+  padding-left: 40%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 17px;
+  width: 140px;
+}
+
+.contact-email {
+  margin-left: 40px;
+}
+.contact-info i {
+  color: #e66969;
+  font-size: 28px;
+}
+
+.contact-info span {
+  position: relative;
+  right: 100px;
+  top: 40px;
+}
+
+/* Modal box starts */
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 75%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal img,
+h3,
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal img {
+  width: 100%;
+  min-width: 100px;
+  height: auto;
+}
+
+.modal h3 {
+  font-size: 40px;
+}
+
+.modal p {
+  font-size: 24px;
+  color: black;
+}
+
+.close-modal:hover {
+  color: red;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1150px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    height: 162%;
+  }
+
+  .contact-text form {
+    width: 65%;
+  }
+
+  .contact-info img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-info p {
+    font-size: 15px;
+    margin-left: 100px;
+  }
+
+  .contact-info i {
+    font-size: 24px;
+  }
+
+  .contact-info span {
+    margin-left: 60px;
+  }
+
+  .contact-text p {
+    margin-left: 10px;
+  }
+
+  .overlay {
+    height: 200%;
+  }
+}
+
+@media (max-width: 600px) {
+  #contact-style {
+    background-image: none;
+  }
+
+  .contact-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal img {
+    width: 100px;
+    position: relative;
+    right: 40px;
+  }
+
+  .modal {
+    height: 65%;
+  }
+}

@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Kdam+Thmor+Pro&family=Lato&family=Nunito:wght@200;400;900&family=Oxygen&display=swap');
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#main-page {
+  margin: 0px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+/* ----- HEADING TITLE FOR MULTIPLE SECTIONS----- */
+.heading {
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  margin-top: 0px;
+}
+
+.heading span {
+  font-size: 2.5rem;
+  color: #e66969;
+  background: #000;
+  padding: 8px 24px;
+  border: 3px solid #aaa;
+  border-radius: 0.5rem;
+}
+
+/* ----- HEADING TITLE FOR MULTIPLE SECTIONS----- */
+
+/* -------------------------NAVBAR STARTS------------------------- */
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #17181d;
+  color: #fff;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  margin: 0.5rem 3rem;
+  font-weight: 800;
+  color: #e66969;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.brand-title:hover {
+  color: #e09145;
+}
+
+.navbar-links ul {
+  margin: 0px 25px 0px 0px;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+  padding: 0px 10px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: #e66969;
+}
+
+.onPage {
+  background-color: #e66969;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* -------------------------NAVBAR ENDS--------------------------------------- */
+
+/* ---------------------------HOME PAGE SECTION STARTS --------------------------- */
+#home {
+  background-image: url(../Resurse/img/home-bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  width: 100%;
+  height: 100vh;
+  padding-top: 7%;
+  padding-left: 4%;
+}
+
+.homeTitle {
+  font-family: 'Oxygen', sans-serif;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.5em;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.homeTitle:nth-last-child(1) {
+  margin-left: 15%;
+}
+
+.homeButton-spacing {
+  /* spatiere in jos pt btn  */
+  padding-bottom: 2.7%;
+}
+
+.coloredTitle {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 70px;
+  color: rgb(230, 105, 105);
+}
+
+.homeButton {
+  width: 300px;
+  height: 100px;
+  border: none;
+  color: #fff;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid rgb(230, 105, 105);
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  padding: 14px;
+  margin: 18%;
+  font-weight: 900;
+}
+
+.homeButton2:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.homeButton:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #e09145;
+}
+
+.homeButton:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  background-color: #e66969;
+  border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+  #home {
+    height: 100vh;
+  }
+
+  .homeButton {
+    padding: 8px;
+    font-size: 25px;
+  }
+
+  .homeTitle:nth-last-child(1) {
+    margin-left: 0%;
+  }
+}
+
+/* ---------------------------HOME PAGE SECTION ENDS --------------------------- */
+
+/* ---------------------------FEATURES SECTION STARTS--------------------------- */
+#features {
+  background-color: #292c35;
+  color: #fff;
+  font-size: 25px;
+  width: auto;
+  height: 600px;
+  border-top: 3px solid #e66969;
+}
+
+.features-flexbox {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+  top: 60px;
+  flex-wrap: wrap;
+}
+
+.iconColor {
+  color: #e66969;
+}
+
+.iconColor:hover {
+  color: red;
+}
+
+@media (max-width: 1200px) {
+  #features {
+    height: 800px;
+  }
+
+  .features-flexbox {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  #features {
+    height: 1000px;
+  }
+}
+
+/* ---------------------------FEATURES SECTION ENDS--------------------------- */
+
+/* --------------------------- GYM TEAM SECTION STARTS --------------------------- */
+#team-style {
+  background-color: #17181d;
+  height: 600px;
+  font-family: 'Lato', sans-serif;
+  border-top: 3px solid #e66969;
+}
+
+.container {
+  width: auto;
+  position: relative;
+  top: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .box:hover {
+  z-index: 1;
+  transform: scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+}
+
+.container .box .imgBx::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, #e66969, black);
+  mix-blend-mode: multiply;
+
+  /*imagine de tip fade cu culoarea de pe linia de mai sus */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box:hover .imgBx::before {
+  opacity: 1;
+}
+
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* alinere text pe partea de jos a cardului */
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+}
+
+.container .box:hover .content h2 {
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.container .box .content p {
+  color: #fff;
+  transform: translateY(200px);
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.container .box:hover .content p {
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+@media (max-width: 1417px) {
+  #team-style {
+    height: 900px;
+  }
+}
+
+@media (max-width: 717px) {
+  #team-style {
+    height: 1600px;
+  }
+
+  .container .box {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+/* --------------------------- GYM TEAM SECTION ENDS ------------------------------- */
+
+/* ---------------------------TESTIMONIALS SECTION STARTS--------------------------- */
+#testimonials {
+  background-color: #292c35;
+  height: 550px;
+  width: 100%;
+  border-top: 3px solid #e66969;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-item {
+  display: none;
+}
+
+.slideshow-item-selected {
+  display: block;
+}
+
+.slideshow-item img {
+  border-radius: 100%;
+  position: relative;
+  left: 44%;
+}
+
+.testimonialName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.prev,
+.next {
+  color: white;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  width: auto;
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .slideshow-item img {
+    position: relative;
+    left: 28%;
+  }
+}
+
+/* ---------------------------TESTIMONIALS SECTION ENDS--------------------------- */
+
+/* ---------------------------FOOTER SECTION STARTS------------------------------- */
+
+#footer {
+  width: 100%;
+  height: 260px;
+  background-color: #17181d;
+  font-size: 20px;
+  line-height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-element {
+  padding: 0px 80px;
+}
+
+.left-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  color: #e09145;
+}
+
+.footer-color {
+  color: #fff;
+}
+
+.footer-color:hover {
+  color: #e66969;
+}
+
+@media (max-width: 640px) {
+  #footer {
+    height: 500px;
+  }
+}
+
+/* ---------------------------FOOTER SECTION ENDS --------------------------- */
