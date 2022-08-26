@@ -224,6 +224,10 @@
   cursor: pointer;
 }
 
+.singin-btn-bottom a {
+  color: #fff;
+}
+
 .singin-btn-bottom:hover {
   background-color: #008f26;
 }

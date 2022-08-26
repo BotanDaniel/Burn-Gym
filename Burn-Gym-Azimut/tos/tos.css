@@ -31,6 +31,7 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb {
   background: #e66969;
+  border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #eb4747;
